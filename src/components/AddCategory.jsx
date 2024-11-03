@@ -3,7 +3,7 @@ import { useState } from 'react'; // Importa el hook useState de React
 // Componente AddCategory que recibe una función onNewCategory como prop
 export const AddCategory = ({ onNewCategory }) => {
   // Estado para manejar el valor del input
-  const [inputValue, setInputValue] = useState('Hello');
+  const [inputValue, setInputValue] = useState();
 
   // Función para manejar el cambio en el input
   const onInputChange = ({ target }) => {

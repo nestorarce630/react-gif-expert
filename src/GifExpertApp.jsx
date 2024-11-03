@@ -12,24 +12,31 @@ export const GifExpertApp = () => {
     if (categories.includes(newCategory)) return;
 
     // Actualiza el estado agregando la nueva categoría al array existente
-    setCategories([...categories, newCategory]);
+    setCategories([newCategory]);
   };
 
   
-
+  const resetGifs = () =>{
+    setCategories([])
+  }
+  
   return (
     <>
       {/* Título de la aplicación */}
       <h1>GifExpertApp</h1>
 
       {/* Componente para agregar nuevas categorías */}
+
       <AddCategory 
         // Prop para manejar la nueva categoría
         onNewCategory={(value) => onAddCategory(value)} 
       />
+      <button onClick={resetGifs}>Reset</button>
+
 
       {/* Listado de categorías */}
 
+    
       <ol>
         {categories.map(category => (
           <GifGrid key={category} category={category} />

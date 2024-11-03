@@ -6,7 +6,8 @@ export const GifGrid = ({category}) => {
 
   const {images,isLoading}  = useFetchGifs(category);
 
-  console.log({images,isLoading})
+  console.log({images,isLoading});
+  
 
   return (
     <>
@@ -15,7 +16,7 @@ export const GifGrid = ({category}) => {
           isLoading&&<h2>Cargando...</h2>
         }
         
-        
+               
         <div className="card-grid">
           {
             images.map( (image) => (
